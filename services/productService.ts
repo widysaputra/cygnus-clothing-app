@@ -22,7 +22,7 @@ export const fetchFeaturedProducts = async (): Promise<Product[]> => {
 export const fetchProductsByCategory = async (category: ProductCategory): Promise<Product[]> => {
   return new Promise(resolve => {
     setTimeout(() => {
-      if (category === ProductCategory.ALL) {
+      if (category === ProductCategory.TSHIRTS) {
         resolve(SAMPLE_PRODUCTS);
       } else {
         resolve(SAMPLE_PRODUCTS.filter(product => product.category === category));

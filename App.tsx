@@ -12,7 +12,7 @@ import { fetchProductsByCategory, fetchFeaturedProducts } from './services/produ
 const App: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory>(ProductCategory.ALL);
+  const [selectedCategory, setSelectedCategory] = useState<ProductCategory>(ProductCategory.TSHIRTS);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -65,7 +65,7 @@ const App: React.FC = () => {
       <main className="flex-grow">
         <HeroSection />
         
-        {featuredProducts.length > 0 && selectedCategory === ProductCategory.ALL && (
+        {featuredProducts.length > 0 && selectedCategory === ProductCategory.TSHIRTS && (
            <ProductGrid products={featuredProducts} title="Featured Collection" />
         )}
 
@@ -74,7 +74,7 @@ const App: React.FC = () => {
           onSelectCategory={handleSelectCategory} 
         />
         
-        {isLoading ? (
+        {/* {isLoading ? (
           <LoadingSpinner />
         ) : error ? (
           <div className="text-center py-10 text-red-400">{error}</div>
@@ -83,7 +83,7 @@ const App: React.FC = () => {
             products={products} 
             title={selectedCategory === ProductCategory.ALL ? "Full Collection" : `${selectedCategory}`} 
           />
-        )}
+        )} */}  
       </main>
       <Footer />
     </div>

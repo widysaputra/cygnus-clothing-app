@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">{BRAND_NAME}</span>
-          <span className="block text-gray-300 mt-2">Explore Your Universe</span>
+          <span className="block text-gray-300 mt-2">Cari Duniamu</span>
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 mb-10">
           Discover unique apparel inspired by the cosmos. Premium quality, stellar designs. Wear the wonder.
